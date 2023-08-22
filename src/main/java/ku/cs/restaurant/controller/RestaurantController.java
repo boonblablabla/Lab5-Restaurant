@@ -24,7 +24,7 @@ public class RestaurantController {
     }
 
     @GetMapping("/restaurant/{id}")
-    public Restaurant getRestaurantById(UUID id) {
+    public Restaurant getRestaurantById(@PathVariable UUID id) {
         return service.getRestaurantById(id);
     }
 
