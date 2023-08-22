@@ -38,6 +38,12 @@ public class RestaurantService {
         return record;
     }
 
+    public Restaurant delete(UUID id) {
+        Restaurant record = repository.findById(id).get();
+        repository.deleteById(id);
+        return record;
+    }
+
     public Restaurant getRestaurantByName(String name) {
         return repository.findByName(name);
     }
